@@ -31,6 +31,12 @@ variable "tailscale_version" {
   default     = "1.44.0"
 }
 
+variable "tailscale_login_server" {
+  type        = string
+  description = "Tailscale login server (for instance, a headscale server)"
+  default     = "https://controlplane.tailscale.com"
+}
+
 variable "vpc_id" {
   type        = string
   description = "id of the VPC to launch the router in"

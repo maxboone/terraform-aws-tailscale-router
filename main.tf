@@ -109,7 +109,7 @@ resource "aws_ecs_task_definition" "default" {
           },
           {
             name  = "TS_EXTRA_ARGS"
-            value = "--hostname ${var.name}"
+            value = "--hostname ${var.name} --login-server ${var.tailscale_login_server}"
           },
           {
             name  = "TS_TAILSCALED_EXTRA_ARGS",
